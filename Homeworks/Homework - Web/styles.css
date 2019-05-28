@@ -1,0 +1,41 @@
+/* Giving the body the specified background color, adding font sizes for the h1 and h3 elements we'll be using */
+body {
+  background: #eee5e5;
+}
+
+/* Giving our navbar some padding and a background color */
+.navbar {
+  background:white;
+  margin-left: -12px
+}
+
+.derecha{
+  margin-left: 69% 
+}
+
+.jumbotron
+{   
+    padding-top: 0px;
+    padding-bottom:0px;
+    width: 60%;
+    margin-left: 0px;
+    background-color: white
+}
+
+.left {
+  width: 35%;
+  height: 350px;
+  margin-left: 30px
+}
+
+#leftheader {
+  font-size: 30px;
+  text-align: center
+}
+
+#copyright {
+  position: absolute;
+  bottom: 0;
+  margin-left: 40%;
+}
+
