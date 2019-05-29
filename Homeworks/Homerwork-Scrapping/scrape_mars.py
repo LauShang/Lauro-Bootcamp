@@ -60,10 +60,12 @@ def scrape():
         v = text[1].split('mn-2">')[1].split('<')[0]
         key.append(k)
         value.append(v)
+    
+    key_c = []
+    for x in key:
+        key_c.append(x.replace(' ','_'))
         
-    mars_facts = dict(zip(key, value))
-
-    mars_facts
+    mars_facts = dict(zip(key_c, value))
 
     url = 'https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars'
     browser.visit(url)
@@ -82,12 +84,10 @@ def scrape():
         l = str(url_links.find('a')).split('"')[1]
         browser.back()
         links_v.append(l)
+    
+    links_k_c = ['Cerberus_Hemisphere_Enhanced','Schiaparelli_Hemisphere_Enhanced','Syrtis_Major_Hemisphere_Enhanced','Valles_Marineris_Hemisphere_Enhanced']
 
-    links_dict = dict(zip(links_k,links_v))
-
-    hemisphere_image_urls = links_dict
-
-    mars_weather
+    hemisphere_image_urls = dict(zip(links_k_c,links_v))
 
     news_title = title
     news_p = paragraph
